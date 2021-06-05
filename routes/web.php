@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\pasienController;
+use App\Http\Controllers\dokterController;
+use App\Http\Controllers\kamarController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('dokter', dokterController::class);
+Route::resource('pasien', pasienController::class);
+Route::resource('kamar', kamarController::class);
